@@ -160,11 +160,6 @@ Resources:
       Principal: "events.amazonaws.com"
       SourceArn: !GetAtt UserCreationEventRule.Arn
 
-  CloudWatchLogGroup:
-    Type: "AWS::Logs::LogGroup"
-    Properties:
-      LogGroupName: !Sub "/aws/lambda/${PrintUserPasswordLambda}"
-      RetentionInDays: 2
 
 Outputs:
   User1Details:
